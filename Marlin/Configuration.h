@@ -355,7 +355,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -453,27 +453,27 @@
 
 
 //http://www.escher3d.com/pages/wizards/wizarddelta.php
-//M665 R122.73 L219.00
+//M665 R112.73 L219.00
 //M666 X-0.10 Y0.00 Z-0.40
-//; Set homed height 245.53mm in config.h
+//; Set homed height 245.58mm in config.h
 //
 
 // Center-to-center distance of the holes in the diagonal push rods.
 #define DELTA_DIAGONAL_ROD 219 // mm
 
 //JOEL adjusts diagonal rod length
-#define DELTA_X_ADJUSTMENT_JOEL 60
-#define DELTA_Y_ADJUSTMENT_JOEL 60
-#define DELTA_Z_ADJUSTMENT_JOEL 60
-#define DELTA_DIAGONAL_ROD_TRIM_TOWER_1 (DELTA_DIAGONAL_ROD * (DELTA_X_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // front left tower
-#define DELTA_DIAGONAL_ROD_TRIM_TOWER_2 (DELTA_DIAGONAL_ROD * (DELTA_Y_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // front right tower
-#define DELTA_DIAGONAL_ROD_TRIM_TOWER_3 (DELTA_DIAGONAL_ROD * (DELTA_Z_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // back middle tower
+#define DELTA_X_ADJUSTMENT_JOEL 60.55
+#define DELTA_Y_ADJUSTMENT_JOEL 61.16
+#define DELTA_Z_ADJUSTMENT_JOEL 61.09
+#define DELTA_DIAGONAL_ROD_TRIM_TOWER_1 (DELTA_DIAGONAL_ROD * (DELTA_X_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // front left tower X
+#define DELTA_DIAGONAL_ROD_TRIM_TOWER_2 (DELTA_DIAGONAL_ROD * (DELTA_Y_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // front right tower Y
+#define DELTA_DIAGONAL_ROD_TRIM_TOWER_3 (DELTA_DIAGONAL_ROD * (DELTA_Z_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // back middle tower Z
 
 //JOEL adjusts tower angle, +6.015 to remove 1 degree from 60, -6 to add 1 degree to 60
 //eg DELTA_RADIUS_TRIM_TOWER_1  6.015 equate to 59 degrees
-#define DELTA_RADIUS_TRIM_TOWER_1 0.0 // front left tower
-#define DELTA_RADIUS_TRIM_TOWER_2 0.0 // front right tower
-#define DELTA_RADIUS_TRIM_TOWER_3 0.0 // back middle tower
+#define DELTA_RADIUS_TRIM_TOWER_1 0.0 // front left tower X
+#define DELTA_RADIUS_TRIM_TOWER_2 2.0 // front right tower Y
+#define DELTA_RADIUS_TRIM_TOWER_3 0.0 // back middle tower Z
 
 // Horizontal offset from middle of printer to smooth rod center.
 //  #define DELTA_SMOOTH_ROD_OFFSET 162.0 // mm
@@ -1056,7 +1056,7 @@ const bool Z_MIN_ENDSTOP_INVERTING = true;  // set to true to invert the logic o
 // For DELTA this is the top-center of the Cartesian print volume.
 //#define MANUAL_X_HOME_POS 0
 //#define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 245.53 // Distance between the nozzle to printbed after homing
+#define MANUAL_Z_HOME_POS 245.58 // Distance between the nozzle to printbed after homing
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
 //
