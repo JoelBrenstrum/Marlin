@@ -327,9 +327,13 @@
 //#define  DEFAULT_Kd 92.82
 
 //Joels
-#define DEFAULT_Kp 32.86
-#define DEFAULT_Ki 3.48
-#define DEFAULT_Kd 77.54
+
+#define  DEFAULT_Kp 29.20
+#define  DEFAULT_Ki 2.20
+#define  DEFAULT_Kd 96.93
+//#define DEFAULT_Kp 32.86
+//#define DEFAULT_Ki 3.48
+//#define DEFAULT_Kd 77.54
 
 // MakerGear
 //#define  DEFAULT_Kp 7.0
@@ -375,9 +379,14 @@
 //#define  DEFAULT_bedKi .023
 //#define  DEFAULT_bedKd 305.4
 
-#define DEFAULT_bedKp 715
-#define DEFAULT_bedKi 115
-#define DEFAULT_bedKd 1107
+
+#define  DEFAULT_bedKp 946.52
+#define  DEFAULT_bedKi 172.86
+#define  DEFAULT_bedKd 1295.67
+
+//#define DEFAULT_bedKp 715
+//#define DEFAULT_bedKi 115
+//#define DEFAULT_bedKd 1107
 
 //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
@@ -462,9 +471,9 @@
 #define DELTA_DIAGONAL_ROD 219 // mm
 
 //JOEL adjusts diagonal rod length
-#define DELTA_X_ADJUSTMENT_JOEL 60.55
-#define DELTA_Y_ADJUSTMENT_JOEL 61.16
-#define DELTA_Z_ADJUSTMENT_JOEL 61.09
+#define DELTA_X_ADJUSTMENT_JOEL 60 //60.55
+#define DELTA_Y_ADJUSTMENT_JOEL 60 //61.16
+#define DELTA_Z_ADJUSTMENT_JOEL 60 //61.09
 #define DELTA_DIAGONAL_ROD_TRIM_TOWER_1 (DELTA_DIAGONAL_ROD * (DELTA_X_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // front left tower X
 #define DELTA_DIAGONAL_ROD_TRIM_TOWER_2 (DELTA_DIAGONAL_ROD * (DELTA_Y_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // front right tower Y
 #define DELTA_DIAGONAL_ROD_TRIM_TOWER_3 (DELTA_DIAGONAL_ROD * (DELTA_Z_ADJUSTMENT_JOEL / 60)) - DELTA_DIAGONAL_ROD // back middle tower Z
@@ -472,7 +481,7 @@
 //JOEL adjusts tower angle, +6.015 to remove 1 degree from 60, -6 to add 1 degree to 60
 //eg DELTA_RADIUS_TRIM_TOWER_1  6.015 equate to 59 degrees
 #define DELTA_RADIUS_TRIM_TOWER_1 0.0 // front left tower X
-#define DELTA_RADIUS_TRIM_TOWER_2 2.0 // front right tower Y
+#define DELTA_RADIUS_TRIM_TOWER_2 0.0 // front right tower Y
 #define DELTA_RADIUS_TRIM_TOWER_3 0.0 // back middle tower Z
 
 // Horizontal offset from middle of printer to smooth rod center.
