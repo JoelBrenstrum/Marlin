@@ -809,10 +809,9 @@ const bool Z_MIN_ENDSTOP_INVERTING = true;  // set to true to invert the logic o
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
 //#define PROBE_MANUALLY
-//#define MANUAL_PROBE_START_Z 0.2
+#define MANUAL_PROBE_START_Z 0.2
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 4000
 // Speed for the first approach when double-probing (with PROBE_DOUBLE_TOUCH)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 // Speed for the "accurate" probe of each point
@@ -911,6 +910,9 @@ const bool Z_MIN_ENDSTOP_INVERTING = true;  // set to true to invert the logic o
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
+
+// X and Y axis travel speed (mm/m) between probes
+#define XY_PROBE_SPEED 8000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1088,7 +1090,7 @@ const bool Z_MIN_ENDSTOP_INVERTING = true;  // set to true to invert the logic o
  * Turn on with the command 'M111 S32'.
  * NOTE: Requires a lot of PROGMEM!
  */
-//#define DEBUG_LEVELING_FEATURE
+#define DEBUG_LEVELING_FEATURE
 #if ENABLED(MESH_BED_LEVELING) || ENABLED(AUTO_BED_LEVELING_BILINEAR) || ENABLED(AUTO_BED_LEVELING_UBL)
   // Gradually reduce leveling correction until a set height is reached,
   // at which point movement will be level to the machine's XY plane.
@@ -1160,8 +1162,8 @@ const bool Z_MIN_ENDSTOP_INVERTING = true;  // set to true to invert the logic o
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
+  #define MESH_INSET 10             // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 3      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
