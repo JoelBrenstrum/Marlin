@@ -137,7 +137,8 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "Joels Mini"
+
+#define CUSTOM_MACHINE_NAME "Joels-" __DATE__ "-" __TIME__
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -808,7 +809,7 @@
 #define XYZ_MICROSTEPS 16
 #define XYZ_BELT_PITCH 2
 #define XYZ_PULLEY_TEETH 16
-#define EXTRUDER_RATE_JOEL 450
+#define EXTRUDER_RATE_JOEL 450 * 1.1 //500
 
 // delta speeds must be the same on xyz
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
@@ -867,7 +868,7 @@
  * value set here, it may happen instantaneously.
  */
 #if DISABLED(JUNCTION_DEVIATION)
-#define DEFAULT_XJERK 15.0
+#define DEFAULT_XJERK 5.0
 #define DEFAULT_YJERK DEFAULT_XJERK
 #define DEFAULT_ZJERK DEFAULT_XJERK // Must be same as XY for delta
 #endif
@@ -1281,8 +1282,8 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
-#define AUTO_BED_LEVELING_UBL
+#define AUTO_BED_LEVELING_BILINEAR
+//#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
 /**
@@ -1328,7 +1329,7 @@
 
 // Set the number of grid points per dimension.
 // Works best with 5 or more points in each dimension.
-#define GRID_MAX_POINTS_X 9
+#define GRID_MAX_POINTS_X 3
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 // Set the boundaries for probing (where the probe can reach).
